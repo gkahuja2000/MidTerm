@@ -29,7 +29,7 @@ public class Account {
      /**The method for depositing amount and 
       * updating balance*/
         public void credit(double amount)
-        {
+        {  
             balance=getBalance()+amount;
         }
 
@@ -46,7 +46,8 @@ public class Account {
      */
         public double getBalance() 
         {
-        return balance;
+            return balance;
+        
         }
 
     /**The getter for InterestRate
@@ -63,6 +64,9 @@ public class Account {
     public String getUser() {
         return user;
     }
-    
+    public double afterInterest(){
+         double bal=balance+interestRate;
+           return bal;
+     }
     
 }//class end

@@ -28,7 +28,15 @@ public class AccountTester {
         Account a=new Account(bal,user);
         ac[0]=a;
              
-        System.out.println("The balance is: "+a.getBalance());  
+        
+        if(a.getBalance()>50.00){
+        System.out.println("The balance is: "+a.getBalance());
+        System.out.println("Account created");
         System.out.println("The InterestRate per month is "+a.getInterestRate());
+        System.out.println("Now Balance is :"+a.afterInterest());}
+        else{
+        System.out.println("Account cannot be created");
+        }
     }
 }
+
